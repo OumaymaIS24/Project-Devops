@@ -27,8 +27,7 @@ public class Etudiant {
     long cinEtudiant;
     Date dateNaissance;
 
-    @ManyToMany(mappedBy = "etudiants")
-    Set<Reservation> reservations;
+
 
 }
 
