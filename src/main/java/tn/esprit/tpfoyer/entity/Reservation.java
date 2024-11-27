@@ -2,47 +2,28 @@ package tn.esprit.tpfoyer.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
-
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @ToString
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class Reservation {
+@NoArgsConstructor
+public class Reservation implements Serializable {
 
     @Id
-    String idReservation;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idReservation;
+    private String dateDebut;
+    private String dateFin;
+    private String note;
+    private String nom;
+    private String prenom;
+    private String email;
 
-
-    Date anneeUniversitaire;
-    boolean estValide;
-
-
-
-
-
-
-
-
-
-
-
-    @ManyToMany
-    Set<Etudiant> etudiants;
-
-
-
-
-    /*@ToString.Exclude
-    @JsonIgnore*/
 
 }
-
-
