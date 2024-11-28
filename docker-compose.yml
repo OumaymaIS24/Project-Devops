@@ -18,7 +18,7 @@ services:
       retries: 5
 
   spring-boot-app:
-    image: oumaymais24/pgres
+    image: oumaymais24/back
     environment:
       SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/oumayma"
       SPRING_DATASOURCE_USERNAME: "postgres"
